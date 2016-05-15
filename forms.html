@@ -4,13 +4,15 @@
 <head>
     <title>Page Title</title>
     
+
+    
 </head>
 
 <body>
 
     <form action="formmail.php">
         first name:
-        <input type="text" />
+        <input type="text" id="fname"/>
         
         <h2>Sports</h2>
         <input type="checkbox" value="surfing" />surfing
@@ -24,9 +26,21 @@
         <br/>
         <input type="radio" name="gender"/>other
         
-        <br />
-        <input type="submit" value="submit" /> 
+        <br /><br />
+        
+        <div id="button" style="background-color:  red; width: 200px; text-align: center; cursor: pointer;">
+            submit
+        </div>
     </form>
+    
+    <script>
+        document.getElementById("button").addEventListener('click', function() {
+            var fname = document.getElementById("fname").value;
+            alert(fname);
+        });
+        
+        
+    </script>
 
 </body>
 </html>
