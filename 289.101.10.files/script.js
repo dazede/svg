@@ -16,5 +16,11 @@ document.getElementById('calculate').addEventListener('click', function() {
   var height = document.getElementById('height').value;
   document.getElementById('triangle').setAttribute('width', width);
   document.getElementById('triangle').setAttribute('height', height);
-  document.getElementById('hypotenuse').value = 'result';
+  document.getElementById('hypotenuse').value = (Math.sqrt(width) + Math.sqrt(height)) ;
+  
+  if (width <= 0 || height <= 0) {
+      alert('error')
+    
+}
 });
+
